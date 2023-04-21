@@ -1,0 +1,300 @@
+
+/*reset*/
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/*estilos generales*/
+
+body{
+    font-family: 'Arimo', sans-serif;
+    font-size:1rem;
+    background-size: cover;
+    background-image: linear-gradient(rgb(252, 249, 79), white);
+}
+header h1{
+    text-align:center;
+    font-family:'Rubik Vinyl',cursive;
+    font-size:80px;
+    font-size-adjust:1.5;
+    margin:1rem;
+    padding:1rem;
+
+}
+
+header nav div ul li{
+    
+    
+    margin:5px;
+    display: inline-block;
+    list-style:none;
+    background-color: rgb(230, 227, 231);
+    font-size:20px;
+    text-decoration:underline;
+    text-transform:uppercase;
+    text-align:center;
+    position:sticky;
+    top: 0;
+    z-index:4;
+    box-shadow: 5px 3px rgb(70, 69, 69);
+    border-radius: 100%; 
+    
+
+}
+header nav ul li:hover{
+    background-color: rgb(247, 125, 69);
+}
+header{
+    grid-area: header;
+}
+
+main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+
+aside{
+    grid-area: aside;
+}
+footer{    
+grid-area: footer;
+display: flex;
+flex-direction: column;
+align-items: center;
+    text-align: center;
+    margin: 1rem;
+    gap:1rem;
+
+}
+    
+.contacto-img{
+    width: 70%;
+}
+/*ESTILO DEL INDEX*/
+/*estilo del main*/
+.formatoTexto2{
+    display:none;
+}
+/*estilo de imagen de lisa*/
+.col-2{
+    width: 30%;
+}
+
+/*Estilo de aside */
+.aside-index{
+    display:none;}
+
+/*ESTILO DE DOCENTE*/
+
+/*estilo de main*/
+.docente-proyecto{
+    display: none;
+
+}
+
+/*estilo de aside*/
+.aside-docente{
+    display:none;
+}
+
+/*ESTILO DE ALUMNOS*/
+
+/*estilo de aside*/
+.aside-alumnos{
+    display: none;
+}
+.formatoTexto5{
+    font-family: 'Arimo', sans-serif;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 24px;
+    margin: 2rem;
+}
+/*ESTILO DE COMUNIDAD*/
+.aside-comunidad{
+    display: none;
+}
+
+/*ESTILO DE CONTACTO*/
+/*estilo de aside*/
+.aside-contacto{
+    display: none;
+}
+main span{
+    display: block;
+}
+.formatoTexto6{
+    font-family: 'Arimo', sans-serif;
+text-align: justify;
+padding: 1rem;
+}
+/*pantalla de tablet*/
+@media screen and (min-width:600px){
+
+/*estilo index*/   
+
+
+
+
+.aside-index{
+    display:block;
+    margin: 1rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+/*estilo docente*/
+.aside-docente{
+    display:block;
+}
+
+/*estilo alumnos*/
+.aside-alumnos{
+    display: block;
+}
+/*estilo comunidad*/
+
+.aside-comunidad{
+    display: block;
+}
+/*estilo contacto*/
+
+.aside-contacto{
+    display: block;
+}
+.boton{
+background-color: rgb(240, 14, 44);
+margin: 0.5rem;
+padding: 0.7rem;
+text-align: center;
+color: antiquewhite;
+box-shadow: 3px 3px;
+}
+}
+
+
+/*Pantalla destopk*/
+
+/*estilo index*/
+
+@media screen and (min-width:1020px){
+   
+   .formatoTexto2{
+    display: block;
+    text-align: justify;
+   }
+   .contenedor-uno{
+    display: grid;
+    grid-template-columns: 2fr 2 fr 1fr;
+    grid-template-rows: 0.5fr 1fr 0.5fr 0.5fr;
+    grid-template-areas: 
+      "header header header"
+      "main main aside"
+      "main main aside"
+      "footer footer footer";
+    gap: 10px;}
+
+.centrarSubtitulo{
+    width: 550px;
+    color: red;
+    text-align:center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-size-adjust:1.5;
+    
+}
+
+.formatoTexto1{
+    text-align: justify;
+}
+.formatoTexto2{
+    text-align: justify;
+}
+
+
+
+
+/*estilo docente*/
+.docente-proyecto{
+    display: block;
+    text-align:center;
+    padding: 1rem;
+}
+.contenedor-dos{	
+    display: grid;
+    grid-template-columns: 2fr 2 fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr;
+    grid-template-areas: 
+      "header header header"
+      "main main  aside"
+      
+      "footer footer footer";
+    gap: 10px;
+}
+.formatoTexto4{
+    font-family: 'Arimo', sans-serif;
+    font-size: large;
+    text-transform: uppercase;
+    background-color: rgb(250, 247, 247);
+    
+}
+
+
+/*estilo alumnos*/
+.contenedor-tres{
+    display: grid;
+    grid-template-columns: 2fr 2 fr 0.5fr;
+    grid-template-rows: 0.5fr 1fr 0.5fr;
+    grid-template-areas: 
+      "header header header"
+      "main main  aside"
+      "footer footer footer";
+    gap: 10px;
+}
+
+
+/*estilo comunidad*/
+.contenedor-cuatro{
+    display: grid;
+    grid-template-columns: 2fr 2 fr 1fr;
+    grid-template-rows: 0.5fr 1fr 0.5fr;
+    grid-template-areas: 
+      "header header header"
+      "main main  aside"
+      "footer footer footer";
+    gap: 10px;
+}
+.estiloTexto{
+    font-family: 'Arimo', sans-serif;
+    width: 300px;
+    text-align: center;
+    color: brown;
+}
+
+/*estilo contacto*/
+.contenedor-cinco{
+    display: grid;
+    grid-template-columns: 2fr 1 fr 2fr;
+    grid-template-rows: 0.4fr 1fr 0.4fr;
+    grid-template-areas: 
+      "header header header"
+      "main main aside"
+      "footer footer footer";
+    gap: 5px;
+}
+
+
+
+}
+
+
+
